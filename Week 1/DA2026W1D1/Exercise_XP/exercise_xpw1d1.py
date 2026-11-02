@@ -81,8 +81,8 @@ if a > b:
 # Instructions
 # Write code that asks the user for a number and determines whether this number is odd or even.
 
-input = int(input("Please enter a number: "))
-if input % 2 == 0:
+input_number = int(input("Please enter a number: "))
+if input_number % 2 == 0:
     print("The number is even.")
 else:
     print("The number is odd.")
@@ -92,11 +92,11 @@ else:
 # Write code that asks the user for their name and determines whether or not you have the same name. Print out a funny message based on the outcome.
 
 my_name = "John"
-input_name = input("Please enter your name: ")
-if input_name.lower() == name.lower():
+input_name_of_user = input("Please enter your name: ")
+if input_name_of_user.lower() == my_name.lower():
     print("Wow, we have the same name!")
 else:
-    print("Nice to meet you, " + input_name + "!")
+    print("Nice to meet you, " + input_name_of_user + "!")
 
 # 🌟 Exercise 9: Tall enough to ride a roller coaster
 # Instructions
@@ -104,7 +104,8 @@ else:
 # If they are over 145 cm, print a message that states they are tall enough to ride.
 # If they are not tall enough, print a message that says they need to grow some more to ride.
 
-input user_height = int(input("Please enter your height in centimeters: "))
+
+user_height = int(input("Please enter your height in centimeters: "))
 if user_height > 145:
     print("You are tall enough to ride the roller coaster!")
 else:
