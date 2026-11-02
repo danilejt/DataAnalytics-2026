@@ -222,6 +222,28 @@ print("The total cost of your pizza is: $" + str(total_cost))
 # $15 for anyone over 12.
 # Print the total ticket cost.
 
+written_list_of_ages = input("Please enter the ages of the people in your family, separated by commas: ")
+#ages = [int(age.strip()) for age in list_of_ages.split(",")]
+ages = written_list_of_ages.split(",")
+
+numeric_list_of_ages = []
+for age in ages:
+    age = int(age)
+    numeric_list_of_ages.append(age)
+    
+
+
+total_cost = 0
+for age in numeric_list_of_ages:
+    if age < 3:
+        ticket_cost = 0
+    elif 3 <= age <= 12:
+        ticket_cost = 10
+    else:
+        ticket_cost = 15
+    total_cost += ticket_cost
+
+print("The total ticket cost is: $" + str(total_cost))
 
 # Bonus:
 
@@ -230,5 +252,14 @@ print("The total cost of your pizza is: $" + str(total_cost))
 # Ask for each person’s age.
 # Remove anyone who isn’t allowed to watch.
 # Print the final list of attendees.
+
+teen_ages_input = input("Please enter the ages of the teenagers, separated by commas: ")
+teen_ages = teen_ages_input.split(",")
+allowed_ages = []
+for age in teen_ages:
+    age = int(age)
+    if 16 <= age <= 21:
+        allowed_ages.append(age)
+print("The final list of attendees (ages 16-21) is:", allowed_ages)
 
 
